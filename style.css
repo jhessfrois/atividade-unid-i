@@ -1,0 +1,90 @@
+:root {
+  /* Cores do Modo Claro (Padrão) */
+  --bg-color: #f0f2f5;
+  --container-bg: #ffffff;
+  --text-color: #333333;
+  --accent-color: #007bff;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe para o Modo Escuro */
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --container-bg: #2d2d2d;
+  --text-color: #f0f0f0;
+  --accent-color: #4da3ff;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark-mode #icon {
+  transform: rotate(360deg);
+}
+
+.clock-container {
+  background-color: var(--container-bg);
+  padding: 2rem 4rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: background-color 0.5s, box-shadow 0.5s, transform 0.3s ease-in-out;
+}
+
+.trocando-tema {
+  transform: scale(0.92);
+}
+
+#icon {
+  display: inline-block;
+  transition: transform 0.5s ease-in-out;
+}
+
+#time {
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: var(--accent-color);
+}
+
+#date {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+#theme-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto;
+  transition: transform 0.2s;
+}
+
+#theme-btn:hover {
+  transform: scale(1.05);
+}
