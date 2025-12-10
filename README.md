@@ -3,7 +3,7 @@
 </p> 
 
 <p align="center">
-Atividades referente à Unidade III de Algoritmos e Estrutura de Dados.
+Atividades referente à Unidade I de Modern Web.
 </p>
 
 <p align="center">
